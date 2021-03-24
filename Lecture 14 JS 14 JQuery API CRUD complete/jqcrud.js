@@ -1,8 +1,8 @@
 $(function () {
-  $("#recipies-main").click(read_recipies);
+  $("#btn btn-primary btn-sm").click(read_recipies);
 });
 function read_recipies() {
-  $ajax({
+  $.ajax({
     url: "https://usman-recipes.herokuapp.com/api/recipes",
     method: "GET",
     success: function (response) {
