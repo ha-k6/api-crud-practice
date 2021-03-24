@@ -1,5 +1,5 @@
 $(function () {
-  $(".btn-primary").click(read_recipies);
+  read_recipies();
 });
 function read_recipies() {
   $.ajax({
