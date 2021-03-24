@@ -12,10 +12,7 @@ function read_recipies() {
       for (var i = 0; i < response.length; i++) {
         var temp = response[i];
         recipes.append(
-          <div class="recipie">
-            <h3>${temp.title}</h3>
-            <p>${temp.body}</p>
-          </div>
+          '<div class="recipie"><h3>${temp.title}</h3><p>${temp.body}</p></div>'
         );
       }
     },
