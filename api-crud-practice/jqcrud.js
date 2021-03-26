@@ -13,7 +13,7 @@ function read_product() {
       for (var i = 0; i < response.length; i++) {
         var temp = response[i];
         product.append(
-          `<div class="product" data-id="${temp.id}"><h3>${temp.name}</h3><button class="btn btn-warning btn-sm float-right">Update</button><button class="btn  btn-danger btn-sm float-right">Delete</button> <h4>${temp.price}</h4><h4>${temp.color}</h4><h4>${temp.department}</h4><p>${temp.description}</p></div>`
+          `<div class="product" data-id="${temp._id}"><h3>${temp.name}</h3><button class="btn btn-warning btn-sm float-right">Update</button><button class="btn  btn-danger btn-sm float-right">Delete</button> <h4>${temp.price}</h4><h4>${temp.color}</h4><h4>${temp.department}</h4><p>${temp.description}</p></div>`
         );
       }
     },
