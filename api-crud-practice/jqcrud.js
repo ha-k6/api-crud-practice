@@ -25,7 +25,7 @@ function delete_product() {
   let id = parent.attr("data-id");
   console.log(id);
   $.ajax({
-    url: "https://usman-recipes.herokuapp.com/api/products" + id,
+    url: "https://usman-recipes.herokuapp.com/api/products/" + id,
     method: "DELETE",
     success: function (response) {
       read_product();
