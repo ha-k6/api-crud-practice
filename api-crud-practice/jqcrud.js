@@ -21,7 +21,7 @@ function read_product() {
 }
 function delete_product() {
   var btn = $(this);
-  var parent = btn.closest(".product-main");
+  var parent = btn.closest(".product");
   let id = parent.attr("data-id");
   console.log(id);
   $.ajax({
