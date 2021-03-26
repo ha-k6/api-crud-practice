@@ -1,6 +1,7 @@
 $(function () {
   read_product();
   $(".product-main").on("click", ".btn-danger", delete_product);
+  $("#addBtn").click(add_product);
 });
 function read_product() {
   $.ajax({
@@ -13,7 +14,7 @@ function read_product() {
       for (var i = 0; i < response.length; i++) {
         var temp = response[i];
         product.append(
-          `<div class="product" data-id="${temp._id}"><h3>${temp.name}</h3><button class="btn btn-warning btn-sm float-right">Update</button><button class="btn  btn-danger btn-sm float-right">Delete</button> <h4>${temp.price}</h4><h4>${temp.color}</h4><h4>${temp.department}</h4><p>${temp.description}</p></div>`
+          `<div class="product" data-id="${temp._id}"><h3>Name: ${temp.name}</h3><button class="btn btn-warning btn-sm float-right">Update</button><button class="btn  btn-danger btn-sm float-right">Delete</button> <h4>Price: ${temp.price}Rs</h4><h4>Color: ${temp.color}</h4><h4>Department: ${temp.department}</h4><p>Desription: ${temp.description}</p></div>`
         );
       }
     },
@@ -29,6 +30,28 @@ function delete_product() {
     method: "DELETE",
     success: function (response) {
       read_product();
+    },
+  });
+}
+function add_product() {
+  var name = $("#name").val();
+  var price = $("#price").val();
+  var color = $("#color").val();
+  var department = $("#department").val();
+  var description = $("#description").val();
+  $.ajax({
+    url: "https://usman-recipes.herokuapp.com/api/products",
+    method: "POST",
+    data: { name, price, color, department, description },
+    success: function (response) {
+      console.log(response);
+      $("#name").val("");
+      $("#price").val("");
+      $("#color").val("");
+      $("#department").val("");
+      $("#description").val("");
+      read_product();
+      $("#addmodal").modal("hide");
     },
   });
 }
