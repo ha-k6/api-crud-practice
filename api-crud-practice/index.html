@@ -52,7 +52,7 @@
                 aria-describedby="namehelp"
                 placeholder="name of product"
               />
-              <small id="titlehelp" class="form-text text-muted">
+              <small id="namehelp" class="form-text text-muted">
                 Enter name of product</small
               >
             </div>
@@ -115,6 +115,111 @@
           </div>
           <div class="modal-footer">
             <button id="addBtn" class="btn btn-info">Add Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- add modal finish -->
+
+    <div class="product-main">Loading...</div>
+
+    <!-- update modal -->
+    <div
+      class="modal fade"
+      id="updateproductmodal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modelTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add new Product</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" id="updatedId" /> <br />
+            <div class="form-group">
+              <label for="title">Updated Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="updatedname"
+                id="updatedname"
+                aria-describedby="updatednamehelp"
+                placeholder="updated name of product"
+              />
+              <small id="updatednamehelp" class="form-text text-muted">
+                Enter updated name of product</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="title">Updated Price</label>
+              <input
+                type="text"
+                class="form-control"
+                name="updatedprice"
+                id="updatedprice"
+                aria-describedby="updatedpricehelp"
+                placeholder="updated Price of product"
+              />
+              <small id="updatedpricehelp" class="form-text text-muted">
+                Enter updated price of product</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="title">Updated Color</label>
+              <input
+                type="text"
+                class="form-control"
+                name="updatedcolor"
+                id="updatedcolor"
+                aria-describedby="updatedcolorhelp"
+                placeholder="updated Color of product"
+              />
+              <small id="updatedcolorhelp" class="form-text text-muted">
+                Enter Updated Color of product</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="title">Updated Department</label>
+              <input
+                type="text"
+                class="form-control"
+                name="updateddepartment"
+                id="updateddepartment"
+                aria-describedby="updateddepartmenthelp"
+                placeholder="updated Department of product"
+              />
+              <small id="updateddepartmenthelp" class="form-text text-muted">
+                Enter updated Department of product</small
+              >
+            </div>
+            <div class="form-group">
+              <label for="title">Updated Description</label>
+              <input
+                type="text"
+                class="form-control"
+                name="updateddescription"
+                id="updateddescription"
+                aria-describedby="updateddescriptionhelp"
+                placeholder="updated Description of product"
+              />
+              <small id="updateddescriptionhelp" class="form-text text-muted">
+                Enter updated Description of product</small
+              >
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="updateBtn" class="btn btn-info">Updated Product</button>
             <button
               type="button"
               class="btn btn-secondary"
@@ -126,8 +231,6 @@
         </div>
       </div>
     </div>
-    <!-- add modal finish -->
-
-    <div class="product-main">Loading...</div>
+    <!-- update modal finish -->
   </body>
 </html>
