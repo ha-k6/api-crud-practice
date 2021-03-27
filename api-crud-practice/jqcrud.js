@@ -51,7 +51,7 @@ function add_product() {
       $("#department").val("");
       $("#description").val("");
       read_product();
-      $("#addmodal").modal("hide");
+      $("#addproductmodal").modal("hide");
     },
   });
 }
